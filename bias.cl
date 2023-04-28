@@ -2,7 +2,7 @@ imarith fits/Useful/obj0208 - fits/temp/cropped/bias_axu fits/temp/axu_ha
 imarith fits/Useful/obj0209 - fits/temp/cropped/bias_axu fits/temp/axu_r
 imarith fits/Useful/obj0210 - fits/temp/cropped/bias_axu fits/temp/axu_v
 
-imarith fits/Useful/obj0211 - fits/temp/cropped/bias_dpm fits/temp/dpm_v_60
+imarith fits/Useful/obj0211 - fits/temp/cropped/bias_dpm fits/temp/dpm_v_15
 imarith fits/Useful/obj0212 - fits/temp/cropped/bias_dpm fits/temp/dpm_v_90
 imarith fits/Useful/obj0213 - fits/temp/cropped/bias_dpm fits/temp/dpm_v_180
 imarith fits/Useful/obj0214 - fits/temp/cropped/bias_dpm fits/temp/dpm_r

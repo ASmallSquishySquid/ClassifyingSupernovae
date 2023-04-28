@@ -2,7 +2,7 @@ imarith fits/temp/biased_images/axu_ha / fits/temp/cropped/Ha_axu fits/temp/axu_
 imarith fits/temp/biased_images/axu_r / fits/temp/cropped/R_axu fits/temp/axu_r_reduced
 imarith fits/temp/biased_images/axu_v / fits/temp/cropped/V_axu fits/temp/axu_v_reduced
 
-imarith fits/temp/biased_images/dpm_v_60 / fits/temp/cropped/V_dpm fits/temp/dpm_v_60_reduced
+imarith fits/temp/biased_images/dpm_v_15 / fits/temp/cropped/V_dpm fits/temp/dpm_v_15_reduced
 imarith fits/temp/biased_images/dpm_v_90 / fits/temp/cropped/V_dpm fits/temp/dpm_v_90_reduced
 imarith fits/temp/biased_images/dpm_v_180 / fits/temp/cropped/V_dpm fits/temp/dpm_v_180_reduced
 imarith fits/temp/biased_images/dpm_r / fits/temp/cropped/R_dpm fits/temp/dpm_r_reduced
