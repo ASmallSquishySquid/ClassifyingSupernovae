@@ -90,13 +90,13 @@ imarith fits/temp/reduced/dpm_v_reduced - 57 fits/temp/sky_subtracted/dpm_v_max
 
 
 imarith fits/temp/reduced/pru_ha_reduced - 110 fits/temp/sky_subtracted/pru_ha_min
-imarith fits/temp/reduced/pru_ha_reduced - 115 fits/temp/sky_subtracted/pru_ha_med
-imarith fits/temp/reduced/pru_ha_reduced - 120 fits/temp/sky_subtracted/pru_ha_max
+imarith fits/temp/reduced/pru_ha_reduced - 114 fits/temp/sky_subtracted/pru_ha_med
+imarith fits/temp/reduced/pru_ha_reduced - 116 fits/temp/sky_subtracted/pru_ha_max
 
-imarith fits/temp/reduced/pru_r_reduced - 500 fits/temp/sky_subtracted/pru_r_min
-imarith fits/temp/reduced/pru_r_reduced - 515 fits/temp/sky_subtracted/pru_r_med
-imarith fits/temp/reduced/pru_r_reduced - 525 fits/temp/sky_subtracted/pru_r_max
+imarith fits/temp/reduced/pru_r_reduced - 496 fits/temp/sky_subtracted/pru_r_min
+imarith fits/temp/reduced/pru_r_reduced - 500 fits/temp/sky_subtracted/pru_r_med
+imarith fits/temp/reduced/pru_r_reduced - 515 fits/temp/sky_subtracted/pru_r_max
 
 imarith fits/temp/reduced/pru_v_reduced - 700 fits/temp/sky_subtracted/pru_v_min
 imarith fits/temp/reduced/pru_v_reduced - 720 fits/temp/sky_subtracted/pru_v_med
-imarith fits/temp/reduced/pru_v_reduced - 735 fits/temp/sky_subtracted/pru_v_max
+imarith fits/temp/reduced/pru_v_reduced - 726 fits/temp/sky_subtracted/pru_v_max
