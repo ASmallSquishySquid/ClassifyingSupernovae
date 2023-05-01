@@ -2,6 +2,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 counts = pd.read_csv("counts.csv");
+plt.rcParams.update({'font.size': 16})
+plt.figure(figsize=(7,10))
 plt.xlim((0, 3))
 plt.ylim((0, 6))
 plt.xlabel("$H \\alpha / R$")
@@ -61,4 +63,10 @@ for x in range(type_0.shape[0]):
 	plt.annotate(type_0.loc[x, "name"], (ha_r_0[x], v_r_0[x]), textcoords="offset points", xytext=(2,-10))
 
 plt.legend()
+plt.title("$V/R$ vs $H \\alpha / R$ of Supernovae")
 plt.savefig("plot.png")
+
+print(ha_r_1)
+print(ha_r_2)
+print(v_r_1)
+print(v_r_2)
