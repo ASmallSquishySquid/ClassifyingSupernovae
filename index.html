@@ -115,31 +115,31 @@
 				<p>
 					The most crucial part of this whole project was determining what the background sky value was for each 
 					supernova. I had to look at each and figure out what do I believe could be the background value. I used three 
-					different values for my background. The one i thought was the most likely candidate for the background, 
-					the minimum possible one that I could believe, and the maximum possible that I could believe. I use the 
-					minimum and maximum values for the error bars in my plot.
+					different values for my background: the one I thought was the most likely candidate for the background, 
+					the minimum possible one that I could believe, and the maximum possible that I could believe. I used the 
+					minimum and maximum values for the error bars in my plot, and the middle value as the data point.
 				</p>
 				<p>
 					Some of them are really easy. They were just kind of floating out in the star field, nothing around them. It 
 					was very easy to figure out the sky values for those. However, some of them were in galaxies which made things 
 					a lot more complicated because galaxies have complicated structure. There's arms and gaps and clumps in the 
-					arms that are brighter and darker. So I had to be really careful about the location of each supernova.
+					arms that are brighter and darker, so I had to be really careful about the location of each supernova.
 				</p>
 				<p>
 					All of this had to also be done by hand. I cannot have the computer do this for 
 					me because of all the complexities, especially in the galaxy. I manually went into DS9, made a little 
-					region, and explored around the supernova and then decided by looking at the mean and medians. 
-					What do i think is noise and what do I think is actually meaningful? 
+					region, and explored around the supernova and then decided by looking at the mean and medians what I think is 
+					noise and what I think is actually meaningful. 
 				</p>
 				<p>
-					And then for the last bit for data reduction after I subtracted out my sky values, I used IRAF for photometry. 
+					For the last bit for data reduction after I subtracted out my sky values, I used IRAF for photometry. 
 					I manually input the apertures and coordinates. I didn't want IRAF to start trying to calculate things 
 					for me, because it tries to calculate the location of the star itself and then ends up doing photometry on the 
-					core of the galaxy, which gives very different results than the tiny little supernova on the arm. So i had to 
-					turn off all any auto fitting that IRAF tries to do.
+					core of the galaxy, which gives very different results than the tiny little supernova on the arm. To avoid this, 
+					I had to turn off all any auto fitting that IRAF tries to do.
 				</p>
 				<p>
-					Once i had my apertures set and looked at the data that came out I chose the aperture for each supernova that I 
+					Once I had my apertures set and looked at the data that came out I chose the aperture for each supernova that I 
 					think is most correct. This was based on when the counts start to either plateau or maxed out. Once the counts 
 					start to plateau, that's when the aperture has passed the edge of the supernova and nothing else is 
 					contributing to your photometry except the sky, which has been zero-d out. 
@@ -174,7 +174,10 @@
 				</p>
 				<figure>
 					<img src="https://raw.githubusercontent.com/ASmallSquishySquid/ClassifyingSupernovae/master/plot_nameless.png" 
-					alt="V/R vs Ha/R plot">
+					alt="V/R vs Hα/R plot">
+					<figcaption>
+						Plot of V/R vs Hα/R, with labeled and color-coded supernovae.
+					</figcaption>
 				</figure>
 			</div>
 
@@ -185,31 +188,71 @@
 					I also wasn't really expecting much of a correlation to be in V/R, which was what my results did show. 
 					However, I was unable to determine statistical significance for the Hα/R ratios without throwing out one of my 
 					data points as an outlier. Even though the difference between the two samples was not statistically significant,
-					I believe that the unknown type has such Hα/R that I can still make an educated guess that it is a type 1 supernova.
+					I believe that the unknown type has such low Hα/R that I can still make an educated guess that it is a type 1 
+					supernova.
 				</p>
 				<p>
-					I did not get nearly enough data to perform a proper statistical analysis. This is due to thee fact that each data point
-					requires at least one image per filter, often going up to three images each depending on magnitude. This took up a lot of
-					time so I wasn't able to get as much data as I wanted.
+					One of the main weaknesses in this project is that I did not get nearly enough data to perform a proper 
+					statistical analysis. This is due to the fact that each data point requires at least one image per filter, 
+					often going up to three images each depending on magnitude. Many of my objects were very faint, so this took up 
+					a lot of telescope time.
 				</p>
 				<p>
-					Spectra appears to be much more effective at classifying than images, just due to the fact that something 
-					that is so obvious in spectra, might not show up in imaging. The narrower Hα filter would do a better job of 
-					isolating the Hα line and reduce interference from other objects. Otherwise the Hα averages out to be
+					Spectra appears to be much more effective at classifying supernovae than images, just due to the fact that something 
+					that is so obvious in spectra might not show up in imaging. The narrower Hα filter would do a better job of 
+					isolating the Hα line and reducing interference from other objects. In a wide bandpass, the Hα averages out to be
 					just a little blip that doesn't affect the Hα/R ratio.
 				</p>
 			</div>
 
 			<h2 id="gallery">Gallery</h2>
 			<div>
-				<img src="src\AXU.png" alt="AXU">
-				<img src="src\BEE.png" alt="BEE">
-				<img src="src\BVH.png" alt="BVH">
-				<img src="src\CJ.png" alt="CJ">
-				<img src="src\CPT.png" alt="CPT">
-				<img src="src\PRU.png" alt="PRU">
-				<img src="src\M13.png" alt="M13">
-				<img src="src\NGC 3810.png" alt="NGC 3810">
+				<figure>
+					<img src="src\CJ.png" alt="CJ">
+					<figcaption>
+						Supernova 2023cj near the center of NGC 5468.
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="src\CPT.png" alt="CPT">
+					<figcaption>
+						Supernova 2023cpt near the center of NGC 5915.
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="src\AXU.png" alt="AXU">
+					<figcaption>Supernova 2023axu in a field of stars.</figcaption>
+				</figure>
+				<figure>
+					<img src="src\BVH.png" alt="BVH">
+					<figcaption>
+						Supernova 2023bvh next to host CGCG 150-024.
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="src\PRU.png" alt="PRU">
+					<figcaption>
+						Supernova 2022pru near the center of UGC 6983.
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="src\BEE.png" alt="BEE">
+					<figcaption>
+						Supernova 2023bee near NGC 2708.
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="src\NGC 3810.png" alt="NGC 3810">
+					<figcaption>
+						Spiral galaxy NGC 3810.
+					</figcaption>
+				</figure>
+				<figure>
+					<img src="src\M13.png" alt="M13">
+					<figcaption>
+						Globular cluster M13.
+					</figcaption>
+				</figure>
 			</div>
 
 			<h2 id="presentation">Presentation</h2>
@@ -224,6 +267,25 @@
 						These slides contain all of the above information in handy, presentation-ready format.
 					</figcaption>
 				</figure>
+			</div>
+
+			<h2 id="references">References</h2>
+			<div>
+				<p>
+					Carini, R., Ragosta, F., Benetti, S., Reguitti, A., & Yaron, O. (2023). ePESSTO+ Transient Classification Report for 2023-02-21. Transient Name Server Classification Report, 2023-407, 1.
+				</p>
+				<p>
+					Carroll, B. W., & Ostlie, D. A. (2017). An Introduction to Modern Astrophysics. Cambridge University Press.
+				</p>
+				<p>
+					Gal-Yam, A., Mazzali, P. A., Manulis, I., & Bishop, D. (2013). Supernova Discoveries 2010-2011: Statistics and Trends. Publications of the Astronomical Society of the Pacific, 125(929), 749-752. doi:10.1086/671483
+				</p>
+				<p>
+					Harvey Mudd College Astronomy. (n.d.). CCD reduction. Photometry in IRAF. Retrieved April 23, 2023, from http://www.physics.hmc.edu/Astronomy/Ireduce.html
+				</p>
+				<p>
+					Zhai, Q., Zhang, J., Li, L., & Wang, X. (2023). LiONS Transient Classification Report for 2023-02-01. Transient Name Server Classification Report, 2023-260, 1.
+				</p>
 			</div>
 		</div>
 	</body>
