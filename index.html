@@ -73,13 +73,17 @@
 					would help isolate the Hα line more.
 				</p>
 				<figure>
-					<img src="https://raw.githubusercontent.com/ASmallSquishySquid/ClassifyingSupernovae/master/expected_ratios/BEE%201600.png" 
+					<a href="https://www.wis-tns.org/object/2023bee">
+						<img src="https://raw.githubusercontent.com/ASmallSquishySquid/ClassifyingSupernovae/master/expected_ratios/BEE%201600.png" 
 					alt="BEE spectra">
+					</a>
 					<figcaption>Spectra of type 1 supernova 2023bee (Zhai, 2023).</figcaption>
 				</figure>
 				<figure>
-					<img src="https://raw.githubusercontent.com/ASmallSquishySquid/ClassifyingSupernovae/master/expected_ratios/BVH%201600.png" 
+					<a href="https://www.wis-tns.org/object/2023bvh">
+						<img src="https://raw.githubusercontent.com/ASmallSquishySquid/ClassifyingSupernovae/master/expected_ratios/BVH%201600.png" 
 					alt="BVH spectra">
+					</a>
 					<figcaption>Spectra of type 1 supernova 2023bvh (Carini, 2023).</figcaption>
 				</figure>
 				<p>
@@ -98,7 +102,47 @@
 			<h2 id="methodology">Methodology</h2>
 			<div>
 				<p>
-					
+					I got data for 8 different supernovae: four type 1, three type 2, and one of unknown type. Only using the 
+					McDonald telescope was very helpful for me, because normally I would need to compare the actual magnitudes of 
+					the different supernovae. However, since I was just using the same telescope and comparing only within the same 
+					object, I only need the ratios within the object. I was able to just use the counts and avoid using any standard
+					stars to calculate the magnitude, which allowed me to skip a lot of extra steps when reducing my data. The only
+					extra thing I had to do with make sure that I normalize my counts for the exposure time. Most of the images that
+					I took had an exposure time of 180 seconds, but then some of the earlier ones I was a little too cautious about 
+					oversaturating 15th magnitude objects so I kept my exposures short at only 15 or 60 seconds. Since counts 
+					increase linearly with time, normalizing the counts is a quick arithmetic operation.
+				</p>
+				<p>
+					The most crucial part of this whole project was determining what the background sky value was for each 
+					supernova. I had to look at each and figure out what do I believe could be the background value. I used three 
+					different values for my background. The one i thought was the most likely candidate for the background, 
+					the minimum possible one that I could believe, and the maximum possible that I could believe. I use the 
+					minimum and maximum values for the error bars in my plot.
+				</p>
+				<p>
+					Some of them are really easy. They were just kind of floating out in the star field, nothing around them. It 
+					was very easy to figure out the sky values for those. However, some of them were in galaxies which made things 
+					a lot more complicated because galaxies have complicated structure. There's arms and gaps and clumps in the 
+					arms that are brighter and darker. So I had to be really careful about the location of each supernova.
+				</p>
+				<p>
+					All of this had to also be done by hand. I cannot have the computer do this for 
+					me because of all the complexities, especially in the galaxy. I manually went into DS9, made a little 
+					region, and explored around the supernova and then decided by looking at the mean and medians. 
+					What do i think is noise And what do I think is actually meaningful? 
+				</p>
+				<p>
+					And then for the last bit for data reduction after I subtracted out my ky values, I used IRAF for photometry. 
+					I manually input the apertures and coordinates. I didn't want IRAF to start trying to calculate things 
+					for me, because it tries to calculate the location of the star itself and then ends up doing photometry on the 
+					core of the galaxy, which gives very different results than the tiny little supernova on the arm. So i had to 
+					turn off all any auto fitting that IRAF tries to do.
+				</p>
+				<p>
+					Once i had my apertures set and looked at the data that came out I chose the aperture for each supernova that I 
+					think is most correct. This was based on when the counts start to either plateau or maxed out. Once the counts 
+					start to plateau, that's when the aperture has passed the edge of the supernova and nothing else is 
+					contributing to your photometry except the sky, which has been zero-d out. 
 				</p>
 			</div>
 
