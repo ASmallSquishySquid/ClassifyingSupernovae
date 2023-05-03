@@ -1,5 +1,5 @@
 # ClassifyingSupernovae
-Classifying supernovae as type 1 or type 2
+Classifying supernovae as type 1 or type 2. See [this website](https://asmallsquishysquid.github.io/ClassifyingSupernovae/) for full details.
 
 Steps:
 1. Bias subtract and flat divide images.
