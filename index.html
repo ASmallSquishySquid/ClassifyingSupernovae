@@ -27,10 +27,13 @@
 			<h2 id="overview">Overview</h2>
 			<div>
 				<p>
-					In this project I attempt to classify supernovae using instrumental magnitudes from the 
+					This is a project for the 
+					<a href="https://sparky.rice.edu/astr230/astr230.html">
+						ASTR 230: Astronomy Laboratory at Rice University.</a>
+					 I attempt to classify supernovae using instrumental magnitudes from the Hα, V, and R filters at the
 					<a href="https://mcdonaldobservatory.org/research/telescopes/08-meter-telescope">
 						0.8 meter telescope at McDonald Observatory.
-					</a> through the Hα, V, and R filters.
+					</a>
 				</p>
 			</div>
 
@@ -55,7 +58,19 @@
 			<div>
 				<p>
 					Even though the type 1 supernovae have different evolution paths, they all have one thing in common: a lack of 
-					hydrogen lines.
+					hydrogen lines. The result that I expect when I compare the Hα/R ratios of the type 1 and type 2 supernovae
+					is that the type 2 supernovae will have a significantly higher ratio than the type 1 supernovae. I also included
+					the V/R ratio, in case it may be another factor. However, I do not expect there to be a significant difference.
+				</p>
+				<p>
+					In order to test this, I took the spectra of a typical type 1 and type 2 supernova and integrated the flux in 
+					IRAF within the R and Hα bandpasses I used. I chose supernovae with z < 0.02 so that the redshift would 
+					minimally affect the integration. As you can see below, the type 2 supernova has a strong Hα line where the type
+					1 does not. I centered my integration at the location of the Hα line at 6563 Å. The R bandpass estimate that I 
+					used was 1600 Å wide, although the actual bandpass was closer to 1200 Å wide. The Hα filter at McDonald that I 
+					used was 700 Å wide, but I also integrated the flux for a 200 Å wide bandpass as that is the width of the 
+					filter that we have on hand at Rice University. I did the integration for both to see if the narrower bandpass 
+					would help isolate the Hα line more.
 				</p>
 				<figure>
 					<img src="https://raw.githubusercontent.com/ASmallSquishySquid/ClassifyingSupernovae/master/expected_ratios/BEE%201600.png" 
@@ -67,6 +82,17 @@
 					alt="BVH spectra">
 					<figcaption>Spectra of type 1 supernova 2023bvh (Carini, 2023).</figcaption>
 				</figure>
+				<p>
+					After doing my flux integration in IRAF, the Hα/R ratio that I got for the wider R bandpass for the type 1
+					supernova was 0.505 and for the type 2 was 0.457. However, with the narrower bandpass I got 0.142 for the
+					type 1 and 0.150 for the type 2. It is likely that because the McDonald R bandpass is so wide, the Hα line is
+					being averaged out so that it doesn't change much in the ratio. The Hα line may look very wide in the spectra
+					above, but that is because it is very zoomed in. With such a large bandpass it's not going to make as much
+					of a difference in counts as I'd want it to. But with the narrower filter, I was able to get results that
+					lined up more with what I expected, which is that the type 1 has a lower Hα/R ratio than the type 2. These
+					supernovae were also part of my dataset, so as shown in the next section these Hα/R ratios are reflected in
+					the actual data I analyzed.
+				</p>
 			</div>
 
 			<h2 id="methodology">Methodology</h2>
