@@ -1,12 +1,2 @@
-# ClassifyingSupernovae
-Classifying supernovae as type 1 or type 2. See [this website](https://asmallsquishysquid.github.io/ClassifyingSupernovae/) for full details.
-
-Steps:
-1. Bias subtract and flat divide images.
-2. Combine the images
-3. Find the min, max, and usable sky value for each image.
-4. Get counts of each supernova using the different sky values.
-5. Normalize for exposure time.
-6. Plot V/R vs Ha/R using the min and max sky value counts as the errors.
-7. Group the type 1 and type 2 supernovae.
-8. Classify the unknown supernovae.
+# Classifying Supernovae
+This is a project for the ASTR 230: Astronomy Laboratory at Rice University. I attempt to classify supernovae using instrumental magnitudes from the Hα, V, and R filters at the 0.8 meter telescope at McDonald Observatory. See [this website](https://asmallsquishysquid.github.io/ClassifyingSupernovae/) for full details.
