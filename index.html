@@ -129,10 +129,10 @@
 					All of this had to also be done by hand. I cannot have the computer do this for 
 					me because of all the complexities, especially in the galaxy. I manually went into DS9, made a little 
 					region, and explored around the supernova and then decided by looking at the mean and medians. 
-					What do i think is noise And what do I think is actually meaningful? 
+					What do i think is noise and what do I think is actually meaningful? 
 				</p>
 				<p>
-					And then for the last bit for data reduction after I subtracted out my ky values, I used IRAF for photometry. 
+					And then for the last bit for data reduction after I subtracted out my sky values, I used IRAF for photometry. 
 					I manually input the apertures and coordinates. I didn't want IRAF to start trying to calculate things 
 					for me, because it tries to calculate the location of the star itself and then ends up doing photometry on the 
 					core of the galaxy, which gives very different results than the tiny little supernova on the arm. So i had to 
@@ -149,7 +149,28 @@
 			<h2 id="results">Results</h2>
 			<div>
 				<p>
-				
+					For my statistical analysis, I performed a two sample t-test because I have two independent populations with
+					a very small sample size. The p-value that I got from the two populations' Hα/R ratio was 0.3936 and for the
+					V/R ratio was 0.2654. This is not statistically significant and I cannot reject my null hypothesis that the 
+					two populations have different average ratios. However, just looking at the plot we can say that the unknown 
+					type supernova is most likely a type 1 supernova and that 2023bvh may be an outlier.
+				</p>
+				<p>
+					2023bvh was actually one of the spectra I used that I thought was a typical type 2 supernova. It had an 
+					unmistakable Hα line but as we can see here, the ratio is quite low. This supernova was on the edge of a galaxy but 
+					I was still confident in the sky values as seen by the low err bars, so I can't attribute the low counts to it 
+					being in a galaxy. However, the flux ratio is comparable to as we predicted it would be in the Expected Results 
+					section. Additionally, if we do treat it as an outlier, the t-test that I discussed earlier leads to a p-value 
+					less than 0.05, which means that there is a statistically significant difference between these two populations. 
+					This means that I can be more confident in my conclusion that the unknown type supernova 2023dpm is a type 1. 
+					But this is only if it's an outlier, which I'm not convinced about just because it had such a strong Hα line.
+				</p>
+				<p>
+					The way I calculated the error bars is such that it's the maximum and minimum possible ratios you can get with 
+					the sky values I subtracted. The very large error bars on three of my data points are due to the fact that it 
+					is very difficult to estimate the sky value inside a galaxy. However, The values that I got for Hα/R from what 
+					believe is the correct sky value are below 1.0, which is as expected. Hα can't be bigger than R because the Hα 
+					bandpass a subsection of the R bandpass.
 				</p>
 				<figure>
 					<img src="https://raw.githubusercontent.com/ASmallSquishySquid/ClassifyingSupernovae/master/plot_nameless.png" 
